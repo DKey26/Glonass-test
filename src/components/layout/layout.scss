@@ -1,0 +1,36 @@
+body {
+  font-family: $main-font;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.3px;
+  overflow-x: hidden;
+  max-width: 100%;
+  min-width: 320px;
+  @include font-size($font-size-base);
+}
+::selection {
+  background-color: $color-accent;
+  color: $color-lightest;
+}
+
+// main{
+// }
+
+.notifyjs-bootstrap-base{
+  background-image: none!important;
+  padding-left: 15px!important;
+  span{
+    font-family: 'Gilroy';
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  &.notifyjs-bootstrap-success{
+    background-color: #49ad96;
+    border-color: #419984;
+    color: #fefefe;
+  }
+}
+
+.grecaptcha-badge{
+  visibility: hidden;
+}

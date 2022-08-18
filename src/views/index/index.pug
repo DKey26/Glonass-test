@@ -1,0 +1,59 @@
+extends ../../components/layout/layout
+
+block variables 
+  - var pageClass = '';
+  - var pageTitle = "Резюме - Колесников Николай";
+  - var pageDescription = ""
+  - var pageName = "index"
+
+block content
+  +b.page-wrapper
+    +b.palette
+
+      +b.row.calculate-row
+        +b.col
+          +b.input-row
+            label
+              input(type="number" disabled)
+        +b.col
+          +b.input-row
+            label
+              input(type="number" disabled)
+
+      +b.row.coordinates-row
+        +b.col
+          +b.input-row
+            label
+              input(type="number")
+        +b.col
+          +b.input-row
+            label
+              input(type="number")
+        +b.col
+          +b.BUTTON.btn(class='--accent') Delete
+
+      +b.row.title
+        +b.col X
+        +b.col Y
+        +b.col
+      
+      +b.row.action
+        +b.col
+          +b.BUTTON.btn(class='--accent') Add
+    +b.row
+      +b.block-wrapper
+
+      +b.block-wrapper
+
+      +b.block-wrapper
+
+    +b.row.action
+      +b.col
+        +b.BUTTON.btn(id="test-data", class='--accent') Fill fields with test data
+    
+    +b.modal-window
+      +e.wrapper
+        +e.SPAN.close
+
+        +b.graph-wrapper
+          canvas(id="graph")
